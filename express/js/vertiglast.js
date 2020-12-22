@@ -1,5 +1,7 @@
 $(document).ready(function(){
     "use strict"; 
+
+    let baseUrl = "http://localhost:8080";
     
     // NAVBAR RESIZE FUNCTION
         $(window).scroll( function() {
@@ -64,6 +66,28 @@ $(document).ready(function(){
         'wrapAround': true
     });
     
+
+    if($('#users')) {
+        $.ajax({
+            type: "POST",
+            url: `${baseUrl}/api/getCustomer`,
+            success: function(res) {
+                if (res.success) {
+                    res.data.forEach(user => {
+                        $('#users tr:last')
+                        .after(`<tr>
+                        <td>${user.name}</td>
+                        <td>${user.phone}</td>
+                        <td>${user.email}</td>
+                        <td>${user.inquiry}</td>
+                        </tr>`);
+                    });
+                }
+            }
+        });
+    }
+
+
     // FORM SCRIPTS
     $("#contactForm").validator().on("submit", function(event) {
         if (event.isDefaultPrevented()) {
@@ -82,19 +106,18 @@ $(document).ready(function(){
         var name = $("#name").val();
         var phone = $("#phone").val();
         var email = $("#email").val();
-        var message = $("#message").val();
-
+        var inquiry = $("#Inquiry").val();
 
         $.ajax({
             type: "POST",
-            url: "php/form-process.php",
-            data: "name=" + name + "&phone=" + phone + "&email=" + email + "&message=" + message,
-            success: function(text) {
-                if (text === "success") {
+            url: `${baseUrl}/api/addCustomer`,
+            data: "name=" + name + "&phone=" + phone + "&email=" + email + "&inquiry=" + inquiry,
+            success: function(res) {
+                if (res.success) {
                     formSuccess();
                 } else {
                     formError();
-                    submitMSG(false, text);
+                    submitMSG(false, res);
                 }
             }
         });
