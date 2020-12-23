@@ -2,6 +2,7 @@ const http = require('http');
 const express = require('express');
 const ejs = require('ejs');
 const path = require('path');
+const cors = require('cors');
 const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -11,6 +12,8 @@ const routes = require('./server/basicRoutes')
 const dotenv = require('dotenv');
 dotenv.config()
 
+
+app.use(cors());
 app.use(express.json());
 app.use(express.static("express"));
 app.use(express.urlencoded({extended: true})); 
