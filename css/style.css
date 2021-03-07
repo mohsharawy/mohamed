@@ -25,14 +25,14 @@ Table of contents
 -------------------------------------------------------------------
 [Color codes]
 
-Background:	#FFF; (white)
-Content:	#222; (black)
-Footer:		#222;
+Background: #FFF; (white)
+Content:    #222; (black)
+Footer:     #222;
 
 a (standard): #FFD012;
 a (hover): #FFD012;
-a (visited): #FFD012;	
-a (active):	#FFD012;
+a (visited): #FFD012;   
+a (active): #FFD012;
 
 [Colors]
 
@@ -51,7 +51,7 @@ Accent Color: #222;
 a {
     color: #FFD012;
     font-family: Raleway, sans-serif;
-	text-decoration: none;
+    text-decoration: none;
 }
 a:visited {
     color: #FFD012;
@@ -59,7 +59,7 @@ a:visited {
 }
 a:hover {
     color: #FFD012;
-	text-decoration: underline;
+    text-decoration: underline;
 }
 a:active {
     color: #FFD012;
@@ -78,7 +78,7 @@ html, body {
     font-size: 16px;
     line-height: 1.5rem; /* 24px */
     max-width: 100%;
-	overflow-x: hidden;
+    overflow-x: hidden;
 }
 /* -Full width fluid container- */
 .full-width {
@@ -87,7 +87,7 @@ html, body {
 }
 /* -Text Styling */
 h1,h2,h3,h4,h5,h6 {
-	font-family: Raleway, sans-serif;
+    font-family: Raleway, sans-serif;
     font-weight: 700;
 }
 h1 {
@@ -129,7 +129,7 @@ p {
     font-weight: bold;
 }
 .subtle {
-	color: #999;
+    color: #999;
 }
 .spaced {
     letter-spacing: 5px;
@@ -152,19 +152,19 @@ ul {
     float: right;
 }
 .inline {
-	display: inline;
+    display: inline;
 }
 .tiny-margin {
     margin-bottom: 3em /* 32px */
 }
 .small-margin {
-	margin-bottom: 6em; /* 96px */
+    margin-bottom: 6em; /* 96px */
 }
 .medium-margin {
-	margin-bottom: 8em; /* 128px */
+    margin-bottom: 8em; /* 128px */
 }
 .large-margin {
-	margin-bottom: 12em; /* 192px */
+    margin-bottom: 12em; /* 192px */
 }
 /* -hr- */
 hr {
@@ -205,9 +205,9 @@ button {
     color: #222;
     border: none;
     background: #FFD012;
-	display: inline-block;
+    display: inline-block;
     outline: none;
-	transition: all 0.2s ease;
+    transition: all 0.2s ease;
     -webkit-backface-visibility: hidden;
     -webkit-transform: translateZ(0) scale(1.0, 1.0);
     cursor: pointer;
@@ -222,6 +222,24 @@ button {
 }
 .button:focus {
     color: #222;
+}
+.number
+{
+    padding-left: 100px;
+}
+.number:hover {
+    transform: scale(1.1);
+    text-decoration: none;
+    color: #222;
+}
+.number button
+{
+background-color: #FFD012;
+padding: 9px 25px;
+ cursor: pointer;
+ border-radius: 30%;
+ border-color: #FFD012;
+ float: left;
 }
 /* --------------------------- /////////// II. PAGE PRELOADER /////////// --------------------------- */
 /* -Loading Screen- */
@@ -421,7 +439,7 @@ button {
     position: relative;
     margin-top: 15vh;
     color: #FFF;
-	text-shadow: none; 
+    text-shadow: none; 
     padding: 20px;
     z-index: 5;
     text-align: center;
@@ -881,7 +899,7 @@ button {
 }
 @media (max-width : 767px) {
     .small-margin {
-	   margin-bottom: 3em;
+       margin-bottom: 3em;
     }
     .medium-margin {
         margin-bottom: 6em;
